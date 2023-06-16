@@ -29,7 +29,6 @@ const MovieCard: FC<MovieCardProps> = ({ movie }) => {
   } = movie;
 
   const [selected, setSelected] = useState<string | null>("");
-  console.log(selected);
 
   return (
     <>

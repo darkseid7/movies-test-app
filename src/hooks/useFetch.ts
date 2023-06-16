@@ -31,7 +31,7 @@ const useMovieSearch = () => {
       });
       const data: SearchResponse = await response.json();
       setMovies(data.results);
-      console.log(data.results);
+
       setTimeout(() => {
         setLoading(false);
       }, 1000);
@@ -48,7 +48,6 @@ const useMovieSearch = () => {
 
   const searchMovies = async (query: string) => {
     if (query.trim() === "") {
-      // Si la consulta está vacía, regresamos a las películas populares
       const popularUrl =
         "https://api.themoviedb.org/3/movie/popular?language=en-US";
       fetchMovies(popularUrl);

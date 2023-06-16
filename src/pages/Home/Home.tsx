@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import SearchBar from "../../components/SearchBar/SearchBar";
 import MovieList from "../../components/MovieList/MovieList";
@@ -14,11 +15,20 @@ export const Home = () => {
   const handleSearchQueryChange = (query: string) => {
     setSearchQuery(query);
     searchMovies(query);
-    console.log(movies);
   };
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return (
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
+        }}
+        className="flex items-center justify-center h-screen"
+      >
+        <h1 className="text-4xl">Loading...</h1>
+      </motion.div>
+    );
   }
   return (
     <Layout>
