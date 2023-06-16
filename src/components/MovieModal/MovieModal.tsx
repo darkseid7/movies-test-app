@@ -43,7 +43,7 @@ const MovieModal: FC<MovieModalProps> = ({
             </button>
             <div className="mt-4">
               <img
-                className=" w-full h-auto"
+                className="w-full h-auto mx-auto md:max-w-xs max-h-[300px] object-none"
                 src={
                   "https://image.tmdb.org/t/p/w220_and_h330_face/" + poster_path
                 }
@@ -64,8 +64,9 @@ const MovieModal: FC<MovieModalProps> = ({
                 <span className=" opacity-50">Original Language: </span>
                 {original_language}
               </p>
-              <p className=" py-1 text-white">
-                <span className=" opacity-50">Overview: </span> {overview}
+              <p className="text-xs py-1 text-white">
+                <span className="text-base opacity-50">Overview: </span>{" "}
+                {overview}
               </p>
             </div>
           </div>
