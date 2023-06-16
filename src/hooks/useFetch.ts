@@ -7,6 +7,7 @@ type Movie = {
   id: string;
   overview: string;
   popularity: number;
+  original_language: string;
 };
 
 type SearchResponse = {
