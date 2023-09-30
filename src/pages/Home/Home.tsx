@@ -24,7 +24,7 @@ export const Home = () => {
           scale: [1, 1.2, 1],
           transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
         }}
-        className="flex items-center justify-center h-screen"
+        className="flex h-screen items-center justify-center"
       >
         <h1 className="text-4xl">Loading...</h1>
       </motion.div>
@@ -38,7 +38,7 @@ export const Home = () => {
         {movies.length > 0 ? (
           movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)
         ) : (
-          <p className="text-4xl col-span-4">
+          <p className="col-span-4 text-4xl">
             No movies found for "{searchQuery}".
           </p>
         )}
